@@ -1,9 +1,20 @@
 import styled from 'styled-components';
 
+
+export const MainContainer = styled.div`
+background: rgb(79,217,173);
+background: linear-gradient(180deg, rgba(79,217,173,1) 5%, rgba(255,255,255,0.99) 55%);
+`;
 export const Container = styled.div`
-    background-color: #27282F;
+    
     color: #FFF;
     min-height: 100vh;
+
+    h1{
+        font-family: 'Rochester', cursive;
+        color: white;
+        text-shadow: 5px -2px 0px rgba(29,125,97,1);
+    }
 `;
 
 export const Area = styled.div`
@@ -35,19 +46,39 @@ export const PhotoList = styled.div`
 `;
 
 export const UploadForm = styled.form`
-    background-color: #3D3F43;
+    background-color: #EFF7F6;
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    height: 40px;
+    width: 500px;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 30px;
 
-    input[type=submit] {
-        background-color:#756DF4;
+    input[type=file] {
+        background-color:#007953;
         border: 0;
         color: #FFF;
         padding: 8px 16px;
         border-radius: 10px;
         margin: 0 20px;
         cursor: pointer;
+        height: 20px;
+
+        &:hover{
+            opacity: .9;
+        }
+    }
+    input[type=submit] {
+        background-color:#007953;
+        border: 0;
+        color: #FFF;
+        padding: 8px 16px;
+        border-radius: 10px;
+        margin: 0 20px;
+        cursor: pointer;
+        height: 35px;
 
         &:hover{
             opacity: .9;

@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #3D3F43;
+    background-color: #F2F2F2;
     border-radius: 10px;
     padding:10px;
     text-align: center;
 
+    {
+        color: black;
+    }
+
     img{
-        max-width: 100%;
-        max-height: 200px;
+        width: 200px;
+        height: 230px;
         display: block;
+        margin: 0 auto;
         margin-bottom: 10px;
         border-radius: 10px;
     }
     button {
         display: block;
-        background-color: #756DF4;
+        background-color: #007953;
         border: 0;
         color: #FFF;
         padding: 8px 16px;

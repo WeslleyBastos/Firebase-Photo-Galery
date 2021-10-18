@@ -3,7 +3,7 @@ import * as C from './App.styles';
 import * as Photos from './services/photos';
 import { Photo } from './types/Photo';
 import { PhotoItem } from './components/PhotoItem';
-
+import Loader from "react-loader-spinner";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -48,20 +48,23 @@ const getPhotos = async () => {
   }
 
   return(
+  <C.MainContainer>
     <C.Container>
       <C.Area>
-        <C.Header>Galeria de Fotos com Firebase</C.Header>
+        <C.Header><h1>Photo Gallery on Firebase</h1></C.Header>
       
       <C.UploadForm method='POST' onSubmit={hendleFormSubmit}>
         <input type="file" name="image"/>
         <input type='submit' value='Enviar'/>
-        {uploading && 'Enviando...'}
+        {uploading && <Loader type="Bars" color="#007953" height={20} width={20}/>}
       </C.UploadForm>
 
       {loading &&
         <C.ScreenWarning>
           <div className = "emoji">✋</div>
-          <div>Carregando...</div>
+          <div>
+          <Loader type="Bars" color="#007953" height={80} width={80}/>
+      </div>
           </C.ScreenWarning>
       }
 
@@ -78,11 +81,12 @@ const getPhotos = async () => {
         
         <C.ScreenWarning>
         <div className = "emoji">😉</div>
-        <div>Sem fotos cadastradas</div>
+        <div><Loader type="Bars" color="#756DF4" height={80} width={80}/></div>
         </C.ScreenWarning>
       }
       </C.Area>
     </C.Container>
+  </C.MainContainer>
   )
 }
 export default App;
