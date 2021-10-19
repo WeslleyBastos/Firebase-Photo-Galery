@@ -51,7 +51,7 @@ const getPhotos = async () => {
   <C.MainContainer>
     <C.Container>
       <C.Area>
-        <C.Header><h1>Photo Gallery on Firebase</h1></C.Header>
+        <C.Header><h1>Firebase Photo Gallery</h1></C.Header>
       
       <C.UploadForm method='POST' onSubmit={hendleFormSubmit}>
         <input type="file" name="image"/>
